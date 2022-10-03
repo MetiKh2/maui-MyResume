@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyResume.MainPage"
+             Title="مهدی خدارحیمی">
+
+    <ScrollView VerticalOptions="FillAndExpand" Margin="0,0,0,10" IsVisible="True"> 
+        <FlexLayout Direction="Column" AlignItems="Center" JustifyContent="SpaceBetween">
+            <Frame Margin="10"
+       BorderColor="Black"
+       CornerRadius="50"
+       HeightRequest="160"
+       WidthRequest="160"
+       IsClippedToBounds="True"
+       HorizontalOptions="Center"
+       VerticalOptions="Center">
+                <Image WidthRequest="165"
+               HeightRequest="165"
+                   Margin="-20"
+                   Aspect="Fill"
+               Source="meti.jpg"/>
+            </Frame>
+
+            <Label FlowDirection="RightToLeft" FontSize="20" Text="مهدی هستم برنامه نویس فول استک وب و موبایل"/>
+            <Label FlowDirection="RightToLeft" FontSize="16" Margin="10,0,0,0" Text=" برترین بخشندگی بخشش در تنگدستی است" TextColor="Grey"/>
+            <HorizontalStackLayout Margin="0,10,0,0" Spacing="40">
+                <Button Text="📧" FontSize="26" BackgroundColor="#fff" BorderWidth="0" Clicked="EmailButton_Clicked" x:Name="EmailButton"/>
+                <Button Text="📱" FontSize="26" BackgroundColor="#fff" BorderWidth="0" Clicked="PhoneButton_Clicked" x:Name="PhoneButton"/>
+                <ImageButton Source="githubsvgrepocom.png" WidthRequest="40" HeightRequest="40" Clicked="GitHubButton_Clicked" x:Name="GitHubButton"/>
+            </HorizontalStackLayout>
+            <CollectionView Grid.Row="1" x:Name="CollectionViewSkills" HeightRequest="60" SelectionMode="None"
+                        >
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal" ItemSpacing="5"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Image Source="{Binding Image}" WidthRequest="50" HeightRequest="50"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <HorizontalStackLayout Margin="0,10,0,0" Spacing="40">
+               
+            </HorizontalStackLayout>
+            <Label
+                Margin="5"
+                FlowDirection="RightToLeft"
+                FontSize="16"
+                BackgroundColor="#dfbcc2"
+                Padding="20"
+                LineHeight="1.4"
+                Text="سلام! من مهدی خدارحیمی هستم. توسعه دهنده فول استک و مشتاق یادگیری . حدود دو ساله برنامه نویسی را شروع کردم و هر روز ازش لذت میبرم "/>
+              </FlexLayout>
+        
+    </ScrollView>
+
+</ContentPage>
